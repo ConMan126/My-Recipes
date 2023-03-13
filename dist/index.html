@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>My Recipes</title>
+</head>
+<body>
+    <div class="container" id="recipe-home">
+        <h1 class="text-center">ADD A RECIPE</h1>
+        <form id="recipe-input">
+            <div>
+                <label for="recipe name">Recipe Name (Required)</label>
+                <input type="text" name="recipe-name" id="recipe-name" class="full-width py-1">
+            </div>
+            <div>
+                <label for="recipe description">Recipe Description (Required)</label>
+                <input type="message" name="recipe-description" id="recipe-description" class="full-width py-1">
+            </div>
+            <div id="recipe-grid">
+                <div>
+                    <label for="ingredients">Ingredients (Required)</label>
+                    <textarea name="ingredients" id="recipe-ingredients" class="full-width"></textarea>
+                </div>
+                <div>
+                    <label for="instructions">Instructions (Required)</label>
+                    <textarea name="instructions" id="recipe-instructions" class="full-width"></textarea>
+                </div>
+            </div>
+            <div id="recipe-optional">
+                <div>
+                    <label for="prep time">Prep Time in Minutes (optional)</label>
+                    <input type="number" name="prep-time" id="prep-time" class="full-width">
+                </div>
+                <div>
+                    <label for="cook time">Cook Time in Minutes (optional)</label>
+                    <input type="number" name="cook-time" id="cook-time" class="full-width">
+                </div>
+                <div>
+                    <label for="total time">Total Time in Minutes (optional)</label>
+                    <input type="number" name="total-time" id="total-time" class="full-width">
+                </div>
+                <div>
+                    <label for="servings">Servings (optional)</label>
+                    <input type="number" name="servings" id="servings" class="full-width">
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Add Recipe" class="full-width py-2">
+            </div>
+        </form>
+        <table id="recipe-table" class="full-width">
+            <h2 class="text-center py-1">My Recipes</h2>
+            <thead>
+                <tr>
+                    <th>Recipe Name</th>
+                    <th>Recipe Description</th>
+                </tr>
+            </thead>
+            <tbody id="recipe-list"></tbody>
+        </table>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <img src="/dist/img/loading.gif" alt="">
+    </div>
+
+    <div class="container" id="recipe-form">
+        <h1 class="text-center" id="recipe-header"></h1>
+        <form id="recipe-final">
+            <div>
+                <label for="recipe name">Recipe Name</label>
+                <input type="text" name="recipe-name" id="recipe-name-specific" class="full-width py-1" disabled>
+            </div>
+            <div>
+                <label for="recipe description">Recipe Description</label>
+                <input type="message" name="recipe-description" id="recipe-description-specific" class="full-width py-1" disabled>
+            </div>
+            <div id="recipe-grid">
+                <div>
+                    <label for="ingredients">Ingredients</label>
+                    <textarea name="ingredients" id="recipe-ingredients-specific" class="full-width" disabled></textarea>
+                </div>
+                <div>
+                    <label for="instructions">Instructions</label>
+                    <textarea name="instructions" id="recipe-instructions-specific" class="full-width" disabled></textarea>
+                </div>
+            </div>
+            <div id="recipe-optional">
+                <div>
+                    <label for="prep time">Prep Time in Minutes (optional)</label>
+                    <input type="text" name="prep-time" id="prep-time-specific" class="full-width" disabled>
+                </div>
+                <div>
+                    <label for="cook time">Cook Time in Minutes (optional)</label>
+                    <input type="text" name="cook-time" id="cook-time-specific" class="full-width" disabled>
+                </div>
+                <div>
+                    <label for="total time">Total Time in Minutes (optional)</label>
+                    <input type="text" name="total-time" id="total-time-specific" class="full-width" disabled>
+                </div>
+                <div>
+                    <label for="servings">Servings (optional)</label>
+                    <input type="text" name="servings" id="servings-specific" class="full-width" disabled>
+                </div>
+            </div>
+            <div class="py-2">
+                <button class="py-2 med-font"><a href="index.html">Back to My Recipes</a></button>
+            </div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

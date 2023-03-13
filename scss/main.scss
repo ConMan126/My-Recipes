@@ -1,0 +1,89 @@
+@import 'variables';
+@import 'utilities';
+
+body {
+    background: url(/dist/img/food.jpg) no-repeat center center/cover;
+}
+
+#recipe {
+
+    &-input {
+        display: inline-block;
+        width: 100%;
+
+        & > div {
+            padding: 5px;
+        }
+
+        & > div > input, textarea {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    &-instructions, &-ingredients {
+        max-height: 400px;
+        min-height: 400px;
+        max-width: 100%;
+        min-width: 100%;
+        resize: none;
+    }
+    
+    
+    &-optional {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        
+        & > div > input {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+    }
+
+    &-table {
+        th {
+            border-bottom: 1px solid black;
+        }
+
+        td {
+            color: white;
+
+            a {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+            }
+        }
+    }
+
+    &-instructions-specific, &-ingredients-specific {
+        max-height: 400px;
+        min-height: 400px;
+        max-width: 100%;
+        min-width: 100%;
+        resize: none;
+    }
+}
+
+#recipe-form {
+    display: none;
+}
+
+#loader {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
